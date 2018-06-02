@@ -3,17 +3,21 @@ from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
 from pdfminer.converter import PDFPageAggregator
 from pdfminer.layout import LAParams, LTTextBox, LTTextLine
 
+import os
+import shutil
+import datetime
+import time
 
 
-fp = open("../Pdf_test/fichier.pdf", 'rb')
+
 
 
 def extract_text_from_pdf(filepath, page_beg, page_end=0):
     if (page_end == 0):
         page_end = page_beg
 
-
-    parser = PDFParser(filepath)
+    fp = open(filepath, 'rb')
+    parser = PDFParser(fp)
     doc = PDFDocument()
 
     parser.set_document(doc)
@@ -41,14 +45,43 @@ def extract_text_from_pdf(filepath, page_beg, page_end=0):
             if isinstance(lt_obj, LTTextBox) or isinstance(lt_obj, LTTextLine):
                 extracted_text += lt_obj.get_text()
                 extracted_text += "\n"
-    fichier = open("../data.txt", "w")
-    fichier.write(extracted_text)
-    fichier.close()
+
     return extracted_text
 
+def prep_challenge():
+    if not os.path.exists("/home/lorys/Documents/targets"):
+        os.makedirs("/home/lorys/Documents/targets")
+
+    for i in range(0,10001-232):
+        print(i)
+
+        src_dir="../Pdf_test/fichier.pdf"
+        dst_dir="/home/lorys/Documents/targets/fichier"+str(i)+".pdf"
+        shutil.copy(src_dir,dst_dir)
 
 
 
-extract_text_from_pdf(fp,1)
 
-.
+def folderpdf2foldertxt(path_in,path_out):
+    start_time = time.time()
+    if not os.path.exists(path_out):
+        os.makedirs(path_out)
+    i=0
+    for f in os.listdir(path_in):
+        i= i+1
+        print(path_in + "/" +f)
+        fichier = open((path_out + "/" + f).replace("pdf","txt"), "w")
+        fichier.write(extract_text_from_pdf(path_in + "/" +f, 1))
+        fichier.close()
+    interval = time.time() - start_time
+    print ('Total time in seconds:', interval) 
+
+
+
+
+
+
+dir = "/home/lorys/Documents/targets"
+dirout = "/home/lorys/Documents/targetstxt"
+#prep_challenge()
+folderpdf2foldertxt(dir, dirout)
