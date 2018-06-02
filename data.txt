@@ -1,0 +1,187 @@
+EXTRACTION PAGE 1
+
+Amazon.com
+
+Alexa, What Will Amazon Disrupt Next? Taking a 
+Closer Look at Ring & Amazon's Smart Home 
+Strategy
+
+We are continuing our series that takes a closer look at Amazon’s innovative and
+disruptive investment areas.We kicked off our series last week looking at Amazon’s 
+grocery strategy and Whole Foods integration (here), and in this note we focus on
+Ring and Amazon’s smart home strategy. We believe the smart home category 
+represents a significant growth opportunity for Amazon, with ~29M connected homes 
+in the US (per McKinsey), including ~13M with active smart speakers (per 
+comScore), and a long runway ahead with ~100M broadband homes in the US and 
+nearly 1B globally. We estimate Amazon’s smart home TAM is ~$50B+ in the US, 
+which assumes ~50M homes spending ~$1k on smart devices, and much larger 
+globally. Beyond its market size, we believe the smart home is a strategically 
+important category as it provides Amazon with an in-home presence, greater
+access to data, and the potential to drive more shopping in other categories 
+through Echo devices/Alexa. Amazon faces significant competition from other major 
+tech platforms including Alphabet and Apple, traditional home security companies,
+and more niche players such as smart lock maker August (acquired by ASSA
+ABLOY). We believe Amazon is well positioned with its strong Echo/Alexa market 
+share, while Ring provides Amazon with a competitive offering to Nest, and in our 
+view Ring will prove to be a highly strategic asset that significantly improves
+Amazon’s smart home offering and position in the home over time.
+
+ What Is Ring? Amazon acquired Ring in February 2018 for a reported ~$1B+, 
+making it one of the largest acquisitions in the company’s history behind Whole 
+Foods. Ring is best known for its video doorbell, which launched in 2013 and is 
+used by an estimated ~2M customers in the US (per IHS Market), representing a
+~97% market share (per NPD). Ring expanded its product offering to include 
+outdoor security cameras in 2016, and it has announced plans for a 2018 product 
+roadmap that includes a home security system and indoor/outdoor camera (see 
+Figure 3 for Ring’s full product suite). Ring more than doubled its revenue to
+~$415M in 2017 (per media reports), has ~2,000 employees, and is a direct 
+competitor to Nest. We note Ring and Nest products are becoming increasingly 
+competitive, with Nest shipping its first video doorbell in March 2018 and Ring 
+expected to launch its first indoor camera and security system later this year. See 
+Figure 1 for a comparison of Ring and Nest smart product offerings.
+
+North America Equity Research
+
+23 March 2018
+
+Overweight
+
+AMZN, AMZN US
+Price: $1,544.92
+Price Target: $1,650.00
+
+Internet
+Doug Anmuth AC
+
+(1-212) 622-6571
+douglas.anmuth@jpmorgan.com
+Bloomberg JPMA ANMUTH <GO>
+J.P. Morgan Securities LLC
+
+Cory A Carpenter
+
+(1-212) 270-8125
+cory.carpenter@jpmorgan.com
+J.P. Morgan Securities LLC
+
+Ashwin Kesireddy
+
+(1-415) 315-6756
+ashwin.x.kesireddy@jpmorgan.com
+J.P. Morgan Securities LLC
+
+Dae K Lee, CFA
+
+(1-212) 622-5673
+dae.k.lee@jpmorgan.com
+J.P. Morgan Securities LLC
+
+Neeraj S Kookada
+
+(91-22) 6157-5052
+neeraj.s.kookada@jpmorgan.com
+J.P. Morgan India Private Limited
+
+Price Performance
+
+$
+
+1,600
+
+1,400
+
+1,200
+1,000
+
+800
+
+Mar-17 Jun-17 Sep-17 Dec-17 Mar-18
+
+AMZN share price ($)
+S&P500 (rebased)
+
+YTD
+1m
+3m
+12m
+Abs 33.0% 6.7% 34.7% 87.6%
+Rel
+32.4% 6.3% 33.7% 71.9%
+
+Amazon.com Inc (AMZN;AMZN US)
+FYE Dec
+2015A 2016A 2017A
+EPS - Reported ($)
+Q1 (Mar)
+Q2 (Jun)
+Q3 (Sep)
+Q4 (Dec)
+FY
+
+(0.12)
+0.19
+0.17
+1.00
+1.25
+
+Source: Company data, Bloomberg, J.P. Morgan estimates.
+
+1.07
+1.78
+0.52
+1.54
+4.90
+
+1.48
+0.40
+0.52
+3.75
+6.15
+
+2018E
+
+2019E
+
+1.12
+1.72
+0.89
+4.25
+8.00
+
+-
+-
+-
+-
+15.95
+
+Company Data
+Price ($)
+Date Of Price 
+52-week Range ($)
+
+Market Cap ($ mn)
+Fiscal Year End 
+Shares O/S (mn)
+Price Target ($)
+Price Target End Date 
+
+1,544.92
+22-Mar-18
+1,617.54-
+833.50
+765,507.90
+Dec
+496
+1,650.00
+31-Dec-18
+
+See page 12 for analyst certification and important disclosures, including non-US analyst disclosures.
+
+J.P. Morgan does and seeks to do business with companies covered in its research reports. As a result, investors should be aware that 
+the firm may have a conflict of interest that could affect the objectivity of this report. Investors should consider this report as only a single 
+factor in making their investment decision.
+
+www.jpmorganmarkets.com
+
+    
+

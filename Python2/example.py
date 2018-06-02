@@ -1,12 +1,5 @@
 # Python 2.7.6
-# PdfAdapter.py
 
-""" Reusable library to extract text from pdf file
-Uses pdfminer library; For Python 3.x use pdfminer3k module
-Below links have useful information on components of the program
-https://euske.github.io/pdfminer/programming.html
-http://denis.papathanasiou.org/posts/2010.08.04.post.html
-"""
 
 
 from pdfminer.pdfparser import PDFParser
@@ -16,46 +9,21 @@ from pdfminer.pdfpage import PDFPage
 from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
 # from pdfminer.pdfdevice import PDFDevice
 # To raise exception whenever text extraction from PDF is not allowed
-from pdfminer.pdfpage import PDFTextExtractionNotAllowed
+
 from pdfminer.layout import LAParams, LTTextBox, LTTextLine
 from pdfminer.converter import PDFPageAggregator
 
 
 
-
 class pdf_text_extractor:
-    """ Modules overview:
-     - PDFParser: fetches data from pdf file
-     - PDFDocument: stores data parsed by PDFParser
-     - PDFPageInterpreter: processes page contents from PDFDocument
-     - PDFDevice: translates processed information from PDFPageInterpreter
-        to whatever you need
-     - PDFResourceManager: Stores shared resources such as fonts or images
-        used by both PDFPageInterpreter and PDFDevice
-     - LAParams: A layout analyzer returns a LTPage object for each page in
-         the PDF document
-     - PDFPageAggregator: Extract the decive to page aggregator to get LT
-         object elements
-    """
 
     def __init__(self, pdf_file_path, password=""):
-        """ Class initialization block.
-        Pdf_file_path - Full path of pdf including name
-        password = If not passed, assumed as none
-        """
+
         self.pdf_file_path = pdf_file_path
         self.password = password
 
     def getText(self):
-        """ Algorithm:
-        1) Txr information from PDF file to PDF document object using parser
-        2) Open the PDF file
-        3) Parse the file using PDFParser object
-        4) Assign the parsed content to PDFDocument object
-        5) Now the information in this PDFDocumet object has to be processed.
-        For this we need PDFPageInterpreter, PDFDevice and PDFResourceManager
-        6) Finally process the file page by page
-        """
+
 
         # Open and read the pdf file in binary mode
         with open(self.pdf_file_path, "rb") as fp:
@@ -64,8 +32,7 @@ class pdf_text_extractor:
             parser = PDFParser(fp)
 
             # Store the parsed content in PDFDocument object
-            document = PDFDocument(parser, self.password)
-
+            document = PDFDocument(parser,self.password)
             # Check if document is extractable, if not abort
             if not document.is_extractable:
                 raise PDFTextExtractionNotAllowed
@@ -106,6 +73,9 @@ class pdf_text_extractor:
                     if (isinstance(lt_obj, LTTextBox) or
                             isinstance(lt_obj, LTTextLine)):
                         extracted_text += lt_obj.get_text()
+
+
+                break;
 
 
         return extracted_text.encode("utf-8")
