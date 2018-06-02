@@ -110,5 +110,5 @@ class pdf_text_extractor:
 
         return extracted_text.encode("utf-8")
 
-ins = pdf_text_extractor("fichier.pdf","")
+ins = pdf_text_extractor("./Pdf-test/fichier.pdf","")
 print(ins.getText())
