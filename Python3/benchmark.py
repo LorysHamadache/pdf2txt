@@ -1,5 +1,5 @@
 from multi_thread import *
-from test3 import *
+from program_linear import *
 import os
 import matplotlib.pyplot as plt
 
