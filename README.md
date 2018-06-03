@@ -22,4 +22,7 @@ Ending Situation : An other Folder containing a .txt for each pdfs containing th
 
 5. Tests => 10 031 pdfs extracted in 44 minutes (pc in use)
 
-6. Optimization MultiThread???
+6. Optimization MultiThread
+    Normal : 22.8 sec for 101 files
+    MultiThread 21.24 sec for 101 files
+    Not Great optimization but still. Lets get more number on it

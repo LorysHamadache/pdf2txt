@@ -9,9 +9,6 @@ import datetime
 import time
 
 
-
-
-
 def extract_text_from_pdf(filepath, page_beg, page_end=0):
     if (page_end == 0):
         page_end = page_beg
@@ -51,7 +48,6 @@ def extract_text_from_pdf(filepath, page_beg, page_end=0):
 def prep_challenge(n):
     if not os.path.exists("/home/lorys/Documents/targets"):
         os.makedirs("/home/lorys/Documents/targets")
-
     for i in range(0,n):
         print(i)
 
@@ -81,7 +77,7 @@ def folderpdf2foldertxt(path_in,path_out):
 
 
 
-dir = "/home/lorys/Documents/targets"
-dirout = "/home/lorys/Documents/targetstxt"
+dir = "/home/lorys/Documents/targets2"
+dirout = "/home/lorys/Documents/targetstxt2"
 #prep_challenge()
 folderpdf2foldertxt(dir, dirout)
