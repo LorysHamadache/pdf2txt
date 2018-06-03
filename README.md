@@ -30,3 +30,10 @@ Ending Situation : An other Folder containing a .txt for each pdfs containing th
     According to an answer on StackOverflow : https://stackoverflow.com/questions/36955638/how-should-i-reduce-the-execution-time-using-threading-in-python
 
     Your threads are fighting with eachother on one core due to the Global Interpreter Lock. The Global Interpreter Lock prevents more than one python thread from running at a time, even on a multi-core system. Thus, to execute multiple cpu-bound tasks in parallel, it is necessary to use processes (from the multiprocessing module) instead of threads.
+
+7. CREATION of Multi Process program
+          Linear : 22.8 sec for 101 files
+          MultiThread 21.24 sec for 101 files
+          Multi Process 5.4 sec for 101 files
+
+          FROM 44 minutes to 12 Minutes thanks to multiprocessing

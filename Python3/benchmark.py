@@ -1,5 +1,7 @@
 from multi_thread import *
 from program_linear import *
+from multi_process import *
+
 import os
 import matplotlib.pyplot as plt
 
@@ -9,6 +11,7 @@ dirout = "/home/lorys/Documents/targetstxt2"
 
 y = []
 y_m = []
+y_p =[]
 
 n = 20
 
@@ -34,4 +37,4 @@ def graph(n):
     plt.plot(y_m)
     plt.show()
 
-#print(folderpdf2foldertxt_m(dir,dirout))
+#suppression_folder(dirout)
