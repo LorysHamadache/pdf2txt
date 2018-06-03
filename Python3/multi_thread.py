@@ -85,7 +85,7 @@ def prep_challenge(dir,n):
 
 
 
-def folderpdf2foldertxt(path_in,path_out):
+def folderpdf2foldertxt_m(path_in,path_out):
     start_time = time.time()
     if not os.path.exists(path_out):
         os.makedirs(path_out)
@@ -95,19 +95,8 @@ def folderpdf2foldertxt(path_in,path_out):
 
     for x in l:
         x.start()
-        
     for x in l:
         x.join()
-
     interval = time.time() - start_time
     print ('Total time in seconds:', interval)
-
-
-
-
-
-
-dir = "/home/lorys/Documents/targets2"
-dirout = "/home/lorys/Documents/targetstxt2"
-
-folderpdf2foldertxt(dir, dirout) #EXECUTED IN 44Minutes for 10 031 pdfs ( Pc was in use)
+    return interval

@@ -71,13 +71,12 @@ def folderpdf2foldertxt(path_in,path_out):
         fichier.close()
     interval = time.time() - start_time
     print ('Total time in seconds:', interval)
+    return interval
 
 
 
 
 
 
-dir = "/home/lorys/Documents/targets2"
-dirout = "/home/lorys/Documents/targetstxt2"
+
 #prep_challenge()
-folderpdf2foldertxt(dir, dirout)

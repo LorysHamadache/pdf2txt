@@ -25,4 +25,8 @@ Ending Situation : An other Folder containing a .txt for each pdfs containing th
 6. Optimization MultiThread
     Normal : 22.8 sec for 101 files
     MultiThread 21.24 sec for 101 files
-    Not Great optimization but still. Lets get more number on it
+    After multiple Tests , it seems MultiThread is slower on average, high volatility of time on multiple tests
+
+    According to an answer on StackOverflow : https://stackoverflow.com/questions/36955638/how-should-i-reduce-the-execution-time-using-threading-in-python
+
+    Your threads are fighting with eachother on one core due to the Global Interpreter Lock. The Global Interpreter Lock prevents more than one python thread from running at a time, even on a multi-core system. Thus, to execute multiple cpu-bound tasks in parallel, it is necessary to use processes (from the multiprocessing module) instead of threads.
