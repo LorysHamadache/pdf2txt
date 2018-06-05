@@ -37,3 +37,5 @@ Ending Situation : An other Folder containing a .txt for each pdfs containing th
           Multi Process 5.4 sec for 101 files
 
           FROM 44 minutes to 12 Minutes thanks to multiprocessing
+
+8. Final program in Python using multiprocessing : without class and with one input for the use (path_in, path_out)

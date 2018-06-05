@@ -11,7 +11,6 @@ from multiprocessing import Pool
 
 
 class extraction():
-
     def extract_text_from_pdf(self):
         if (self.page_end == 0):
             self.page_end = self.page_beg
@@ -79,8 +78,8 @@ def prep_challenge(dir,n):
         shutil.copy(src_dir,dst_dir)
 
 def fonction(fichier):
-    path_in = "/home/lorys/Documents/targets"
-    path_out = "/home/lorys/Documents/targetstxt"
+    path_in = "/home/lorys/Documents/targets2"
+    path_out = "/home/lorys/Documents/targetstxt2"
     x = extraction(path_in,path_out,fichier,1)
 
 
@@ -100,6 +99,20 @@ def folderpdf2foldertxt_p(path_in,path_out):
     print ('Total time in seconds:', interval)
     return interval
 
-dir = "/home/lorys/Documents/targets"
-dirout = "/home/lorys/Documents/targetstxt"
-folderpdf2foldertxt_p(dir,dirout)
+def suppression_folder(dir):
+    for the_file in os.listdir(dir):
+        file_path = os.path.join(dir, the_file)
+        try:
+            if os.path.isfile(file_path):
+                os.unlink(file_path)
+                #elif os.path.isdir(file_path): shutil.rmtree(file_path)
+        except Exception as e:
+            print(e)
+y=[]
+dir = "/home/lorys/Documents/targets2"
+dirout = "/home/lorys/Documents/targetstxt2"
+
+for i in range (0,5):
+    suppression_folder(dirout)
+    y.append(folderpdf2foldertxt_p(dir,dirout))
+print(y)
