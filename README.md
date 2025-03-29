@@ -1,124 +1,100 @@
-# pdf2txt — Batch PDF First-Page Text Extractor
+# pdf2txt-multipage-extractor
 
-**pdf2txt** is a Python script that extracts the **first page** of text from every PDF in a folder and saves each as a `.txt` file with the same name.  
-It is optimized using **Python multiprocessing** and was successfully tested on **10,031 PDFs**, reducing total processing time from **44 minutes to 12 minutes**.
-
----
-
-## 📌 Features
-
-- Extracts **only the first page** for speed and relevance
-- Preserves **indentation** and **text encoding**
-- Batch processes entire folders
-- Outputs `.txt` files with matching names
-- Fast, minimal, no unnecessary dependencies
+**pdf2txt-multipage-extractor** is a Python tool designed to extract text from PDF files, processing entire directories efficiently. Optimized with multiprocessing, it can handle thousands of PDFs, making it suitable for large-scale document conversion tasks.
 
 ---
 
-## 🚀 Usage
+## Features
 
-### Requirements
-
-- Python 3.x
-- [`pdfminer.six`](https://github.com/pdfminer/pdfminer.six)
-
-### Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### Run the script
-
-```bash
-python pdf_to_txt.py <input_folder> <output_folder>
-```
-
-Example:
-
-```bash
-python pdf_to_txt.py ./pdfs ./txts
-```
-
-> Each PDF in `./pdfs` will be processed, and the output text will be written to `./txts/filename.txt`.
+- **Batch Processing**: Converts all PDFs in a specified folder to text files.
+- **Multiprocessing**: Utilizes multiple CPU cores for faster processing.
+- **Encoding Handling**: Manages various text encodings to ensure accurate text representation.
+- **Indentation Preservation**: Retains the original indentation and structure from PDFs.
 
 ---
 
-## 🧠 Implementation Notes
+## Repository Structure
 
-- Uses `pdfminer.six` for PDF parsing and text extraction
-- Focused on **first-page only** to speed up processing and reduce noise
-- Ensures:
-  - Proper UTF-8 encoding
-  - Correct word spacing
-  - Structural indentation preserved
+- `Pdf_test/`: Directory containing sample PDFs for testing purposes.
+- `Python2/`: Contains the Python 2 version of the extraction script.
+- `Python3/`: Contains the Python 3 version of the extraction script.
+- `README.md`: This file, providing an overview of the project.
 
 ---
 
-## ⏱️ Performance
+## Getting Started
 
-- Test Set: **10,031 PDFs**
-- **Single-threaded**: ~44 min  
-- **Multi-threaded**: ~21.2 sec for 101 files (but unstable)  
-- **Multiprocessing**: ~5.4 sec for 101 files → **Full run in ~12 min**
+### Prerequisites
 
----
+- **Python 3.x** (recommended)
+- **pdfminer.six**: A PDF parsing library for text extraction.
 
-## 📜 Development History
+### Installation
 
-1. **Library Research**:
-   - `PyPDF` worked on user PDFs but failed on test files.
-   - Custom parser failed due to encoding issues.
-   - Settled on `pdfminer` (`pdfminer3k` for Python 3) for proper text handling.
+1. **Clone the Repository**:
 
-2. **Single PDF Extraction Tool**:
-   - Tuned parameters for:
-     - Proper UTF-8 encoding
-     - Correct word spacing
-     - Indentation preservation
+   ```bash
+   git clone https://github.com/LorysHamadache/pdf2txt-multipage-extractor.git
+   cd pdf2txt-multipage-extractor/Python3
+   ```
 
-3. **Created test folders** for structured evaluation.
+2. **Install Dependencies**:
 
-4. **Batch Processing Script**:
-   - Built program to extract from all PDFs in a given folder.
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-5. **Initial Benchmark**:
-   - Processed 10,031 PDFs in **44 minutes** on a lightly used PC.
+### Usage
 
-6. **Multithreading Attempt**:
-   - `Linear`: 22.8 sec for 101 files  
-   - `Multithread`: 21.24 sec for 101 files  
-   - Result: **High volatility**, sometimes slower than linear.
-   - Cause: Python’s **Global Interpreter Lock (GIL)** prevents true parallelism in threads.  
-     Ref: [StackOverflow](https://stackoverflow.com/questions/36955638/how-should-i-reduce-the-execution-time-using-threading-in-python)
+1. **Prepare Your Directories**:
+   - Place all target PDF files into a source directory (e.g., `input_pdfs/`).
+   - Ensure an output directory exists for the text files (e.g., `output_txts/`).
 
-7. **Switched to Multiprocessing**:
-   - `Multiprocessing`: 5.4 sec for 101 files
-   - Brought total processing time down to **~12 minutes**
+2. **Run the Extraction Script**:
 
-8. **Final Version**:
-   - Python script using `multiprocessing`
-   - Minimal, no class boilerplate
-   - Simple CLI with two arguments: `input_path`, `output_path`
+   ```bash
+   python pdf_to_txt.py input_pdfs/ output_txts/
+   ```
+
+   Replace `pdf_to_txt.py` with the actual script name if different.
+
+3. **Review Output**:
+   - Each PDF in `input_pdfs/` will have a corresponding `.txt` file in `output_txts/` containing the extracted text.
 
 ---
 
-## 📁 Project Structure
+## Implementation Details
 
-- `pdf_to_txt.py` – Main script
-- `requirements.txt` – Dependencies
-- `README.md` – This file
+1. **Library Selection**:
+   - **pdfminer.six** was chosen for its reliability in text extraction across diverse PDF formats.
+
+2. **Extraction Process**:
+   - **Single PDF Handling**: Developed a function to extract text, ensuring proper encoding and indentation.
+   - **Batch Processing**: Implemented a loop to process all PDFs in the source directory.
+   - **Multiprocessing**: Utilized Python's `multiprocessing` module to enhance processing speed by leveraging multiple CPU cores.
+
+3. **Performance**:
+   - **Tested** on 10,031 PDFs, completing extraction in approximately 12 minutes under typical system load.
+   - **Optimization Attempts**: Explored multithreading; however, observed no significant performance gains due to the Global Interpreter Lock (GIL) in Python.
 
 ---
 
-## 📄 License
+## License
 
-MIT License — see [LICENSE](./LICENSE)
+This project is licensed under the MIT License. See the `LICENSE` file for details.
 
 ---
 
-## 🔗 Related Links
+## Contributing
 
-- [pdfminer.six Docs](https://pdfminersix.readthedocs.io/)
-- [Python Multiprocessing Docs](https://docs.python.org/3/library/multiprocessing.html)
-- [StackOverflow Thread on GIL](https://stackoverflow.com/questions/36955638/how-should-i-reduce-the-execution-time-using-threading-in-python)
+Contributions are welcome! Please fork the repository and submit a pull request with your enhancements.
+
+---
+
+## Contact
+
+For questions or suggestions, please open an issue in the repository.
+
+---
+
+*Note: This project is provided "as-is" without warranty of any kind. Use at your own discretion.*
